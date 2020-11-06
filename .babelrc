@@ -1,0 +1,16 @@
+{
+    "presets": [
+        // to work with ES5 and ES6
+        [
+            //This configuration works to use aync await
+            "@babel/preset-env",
+            {
+              "targets": {
+                "esmodules": true
+              }
+            } 
+          ],
+        // to work with jsx and react
+        "@babel/preset-react"
+    ]
+}
