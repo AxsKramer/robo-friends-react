@@ -32,9 +32,20 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    }
                 ]
-            }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                  'file-loader',
+                ],
+            },
         ]
     },
     plugins: [
